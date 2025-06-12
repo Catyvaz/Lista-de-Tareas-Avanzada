@@ -1,0 +1,8 @@
+{
+    "tareas": [
+        {"titulo": "Comprar leche", "estado": false },
+        {"titulo": "Estudiar JavaScript", "estado": false },
+        {"titulo": "Leer un libro", "estado": false },
+        {"titulo":"Comprar pan con leche y salir a pasear", "estado": false }
+    ]
+}

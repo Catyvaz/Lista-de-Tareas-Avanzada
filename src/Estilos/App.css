@@ -1,0 +1,78 @@
+body{
+  background-color: #B9E0FF;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-div{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 85vh;
+  width: 40vw;
+  border-radius: 15px;
+  overflow: hidden;
+  gap: 1em;
+}
+
+.header-titulo{
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  background-color: #186AA9;
+  height: 2.5em;
+  width:100%;
+}
+
+.contenedor-input{
+  align-items:baseline;
+  justify-content: center;
+  display: flex;
+  gap: 1vw;
+}
+
+.input-tarea{
+  width: 25vw;
+  border: 1px solid #186AA9;
+  background-color: #E2F1FC;
+  color: #186AA9;
+  outline: none;
+}
+
+.btn-agregar{
+  background-color: #186AA9;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contenedor-tareas{
+  border: #186AA9;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  width: 85%;
+  overflow: hidden;
+  gap: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+

@@ -1,0 +1,45 @@
+.cont-tarea {
+  font-family: Arial, sans-serif;
+  font-size: 0.8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 95%;
+  height:fit-content;
+  background-color: #B6D9F5;
+  border-radius: 15px;
+  padding-right: 0.5em;
+  overflow: hidden;
+  margin: 0;
+}
+
+.cont-check-titulo{
+  width: 160%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0;
+}
+
+.botones-extras{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5em;
+  overflow: hidden;
+}
+
+.botones-extras > button {
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-tarea-modificar{
+  background-color: #4aa5eb;
+}
+
+.btn-tarea-eliminar{
+  background-color: #f14343;
+}
