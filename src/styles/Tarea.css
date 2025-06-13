@@ -1,6 +1,6 @@
 .cont-tarea {
   font-family: Arial, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 95%;
@@ -30,7 +30,7 @@
 }
 
 .botones-extras > button {
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -42,4 +42,8 @@
 
 .btn-tarea-eliminar{
   background-color: #f14343;
+}
+
+.titulo-tarea-hecha{
+  text-decoration: line-through;
 }

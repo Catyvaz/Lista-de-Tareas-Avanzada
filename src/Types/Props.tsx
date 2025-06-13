@@ -1,4 +1,15 @@
-export type TareaProps = {
+export interface TareaProps {
   titulo: string;
   estado: boolean;
-};
+}
+
+export interface TareaPropsExtended extends TareaProps {
+  onCambiarEstado: (titulo: string) => void;
+  onEliminar: (titulo: string) => void;
+  onModificar: (titulo: string) => void;
+}
+
+export interface ListaTareasProps {
+  tareas: TareaProps[];
+  FiltrarTareas: (estado: boolean) => TareaProps[];
+}
