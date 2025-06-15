@@ -1,12 +1,12 @@
 import { type ListaTareasProps } from "../Types/Props";
 import { Tarea } from "./Tarea";
-import { EliminarTarea, CambiarEstadoTarea } from "./Metodos";
+import { EliminarTarea, CambiarEstadoTarea, ModificarTarea } from "./Metodos";
 import React from "react";
+import { List, ListItem } from "@mui/material";
 
-interface listaT extends ListaTareasProps {
-  setTareas: React.Dispatch<React.SetStateAction<ListaTareasProps["tareas"]>>;
-}
-export const ListaTareas: React.FC<listaT> = ({ tareas, setTareas }) => {
+//SetStateAction, define el tipo de valor que se le pasa al setter, y aca lo que hace es permitir que se pase una lista nueva o una función que retorna una lista.
+
+export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, setTareas }) => {
   const handleCambiarEstado = (titulo: string) => {
     CambiarEstadoTarea(tareas, setTareas, titulo);
   };
@@ -16,32 +16,26 @@ export const ListaTareas: React.FC<listaT> = ({ tareas, setTareas }) => {
   };
 
   const handleModificar = (titulo: string) => {
-    const nuevoTitulo = prompt("Ingresa el nuevo título:", titulo);
-    if (nuevoTitulo && nuevoTitulo.trim() !== "") {
-      const nuevasTareas = tareas.map((tarea) =>
-        tarea.titulo === titulo
-          ? { ...tarea, titulo: nuevoTitulo.trim() }
-          : tarea
-      );
-      setTareas(nuevasTareas);
-    } else if (nuevoTitulo && nuevoTitulo.trim() === titulo) {
-      alert("El nuevo título es igual al anterior.");
-    } else if (!nuevoTitulo || nuevoTitulo.trim() === "") {
-      return; // No hacer nada si está vacío{
-    }
+    ModificarTarea(tareas, setTareas, titulo);
   };
 
-  return tareas
-    .slice()
-    .reverse()
-    .map((tarea, index) => (
-      <Tarea
-        key={index}
-        titulo={tarea.titulo}
-        estado={tarea.estado}
-        onCambiarEstado={handleCambiarEstado}
-        onEliminar={handleEliminar}
-        onModificar={handleModificar}
-      />
-    ));
+  return (
+    <List sx={{ maxHeight: 400, overflow: 'auto', alignItems: "flex-start"}}>
+      {tareas
+      .slice()
+      .reverse()
+      .map((tarea, index) => (
+        <ListItem key={index}>
+        <Tarea
+          key={index}
+          titulo={tarea.titulo}
+          estado={tarea.estado}
+          onCambiarEstado={handleCambiarEstado}
+          onEliminar={handleEliminar}
+          onModificar={handleModificar}
+        />
+        </ListItem>
+      ))}
+    </List>
+  );
 };

@@ -1,4 +1,3 @@
-
 import type { TareaProps } from "../Types/Props";
 
 export function AgregarTarea(
@@ -30,13 +29,31 @@ export function EliminarTarea(
   alert("Tarea eliminada exitosamente.");
 }
 
+export function ModificarTarea(
+  tareas: TareaProps[],
+  setTareas: React.Dispatch<React.SetStateAction<TareaProps[]>>,
+  titulo: string
+) {
+  const nuevoTitulo = prompt("Ingresa el nuevo título:", titulo);
+  if (nuevoTitulo && nuevoTitulo.trim() !== "") {
+    const nuevasTareas = tareas.map((tarea) =>
+      tarea.titulo === titulo ? { ...tarea, titulo: nuevoTitulo.trim().replace(/\s+/g, " ") } : tarea
+    );  //en esta linea tomo el valor y le saco los espacios de más
+    setTareas(nuevasTareas);
+  } else if (nuevoTitulo && nuevoTitulo.trim() === titulo) {
+    alert("El nuevo título es igual al anterior.");
+  } else if (!nuevoTitulo || nuevoTitulo.trim() === "") {
+    return
+  }
+}
+
 export function CambiarEstadoTarea(
   tareas: TareaProps[],
   setTareas: React.Dispatch<React.SetStateAction<TareaProps[]>>,
   titulo: string
 ) {
-  const nuevasTareas = tareas.map((tarea) =>
+  const nuevosEstados = tareas.map((tarea) =>
     tarea.titulo === titulo ? { ...tarea, estado: !tarea.estado } : tarea
   );
-  setTareas(nuevasTareas);
+  setTareas(nuevosEstados);
 }

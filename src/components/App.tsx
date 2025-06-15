@@ -9,7 +9,9 @@ import { type TareaProps } from "../Types/Props";
 
 export const App = () => {
   const [titulo, setTitulo] = useState("");
-  const [tareas, setTareas] = useState<TareaProps[]>([]);
+  const [tareas, setTareas] = useState<TareaProps[]>([
+    { titulo: "tarea 1", estado: false },
+  ]);
   const [filtro, setFiltro] = useState<"todas" | "pendientes" | "hechas">(
     "todas"
   );
@@ -28,6 +30,7 @@ export const App = () => {
         return tareas;
     }
   };
+
   return (
     <div className="main-div">
       <header className="header-titulo">Lista de Tareas</header>
@@ -38,11 +41,13 @@ export const App = () => {
           className="input-tarea"
           value={titulo}
           onChange={tomarTitulo}
+          size= "small"
         />
         <Button
           variant="contained"
           className="boton-agregar"
           onClick={() => AgregarTarea(titulo, tareas, setTareas, setTitulo)}
+          size="medium"
         >
           Agregar
         </Button>

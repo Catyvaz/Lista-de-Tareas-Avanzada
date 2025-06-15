@@ -4,9 +4,9 @@ import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRen
 import "../styles/Tarea.css";
 import type { TareaPropsExtended } from "../Types/Props";
 
-export const Tarea: React.FC<TareaPropsExtended> =({ titulo, estado, onCambiarEstado, onEliminar,onModificar }) => {
+export const Tarea: React.FC<TareaPropsExtended> =({ titulo, estado, onCambiarEstado, onEliminar, onModificar }) => {
   const handleCambiarEstado = () => {
-    onCambiarEstado(titulo); // Llama a la función del padre
+    onCambiarEstado(titulo); // Llama a la función del padre, que seria ListaTareas. Cada que se crea una tarea, tiene sus funciones
   };
 
   const handleEliminar = () => {
