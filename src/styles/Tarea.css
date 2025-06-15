@@ -1,19 +1,21 @@
 .cont-tarea {
   font-family: Arial, sans-serif;
-  font-size: 0.9em;
+  font-size: 1.1vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 95%;
-  height:fit-content;
-  background-color: #B6D9F5;
+  width: 32vw;
+  height: fit-content;
+  justify-content: space-between;
+  background-color: #b6d9f5;
   border-radius: 15px;
   padding-right: 0.5em;
   overflow: hidden;
   margin: 0;
+  gap: 5%;
 }
 
-.cont-check-titulo{
-  width: 160%;
+.cont-check-titulo {
+  width: 24vw;
   margin: 0;
   display: flex;
   justify-content: flex-start;
@@ -21,29 +23,74 @@
   padding: 0;
 }
 
-.botones-extras{
+.botones-extras {
   display: flex;
+  width: 7vw;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.5em;
   overflow: hidden;
 }
 
 .botones-extras > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  height: 2.2vw;
+  width: 2.5vw;
 }
 
-.btn-tarea-modificar{
+.btn-tarea-modificar {
   background-color: #4aa5eb;
 }
 
-.btn-tarea-eliminar{
+.btn-tarea-eliminar {
   background-color: #f14343;
 }
 
-.titulo-tarea-hecha{
+.titulo-tarea-hecha {
   text-decoration: line-through;
+}
+
+@media screen and (max-width: 800px) {
+  .cont-tarea {
+    width: 75vw;
+    height: fit-content;
+    gap: 3vw;
+  }
+  .cont-check-titulo {
+    width: 60vw;
+    font-size: 2vw;
+    align-items: center;
+  }
+  .botones-extras {
+    width: 11vw;
+  }
+  .botones-extras > button {
+    height: 5vw;
+    width: 5vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cont-tarea {
+    width: 75vw;
+    height: fit-content;
+    gap: 1vw;
+  }
+  .cont-check-titulo {
+    width: 58vw;
+    font-size: 3.2vw;
+    align-items: center;
+  }
+  .botones-extras {
+    width: 15vw;
+  }
+  .botones-extras > button {
+    height: 6vw;
+    width: 6vw;
+  }
 }
