@@ -20,22 +20,22 @@ export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, setTareas }) =
   };
 
   return (
-    <List>
+    <List sx={{ maxHeight: 400, overflow: 'auto', alignItems: "flex-start"}}>
       {tareas
-        .slice()
-        .reverse()
-        .map((tarea, index) => (
-          <ListItem key={index}>
-            <Tarea
-              key={index}
-              titulo={tarea.titulo}
-              estado={tarea.estado}
-              onCambiarEstado={handleCambiarEstado}
-              onEliminar={handleEliminar}
-              onModificar={handleModificar}
-            />
-          </ListItem>
-        ))}
+      .slice()
+      .reverse()
+      .map((tarea, index) => (
+        <ListItem key={index}>
+        <Tarea
+          key={index}
+          titulo={tarea.titulo}
+          estado={tarea.estado}
+          onCambiarEstado={handleCambiarEstado}
+          onEliminar={handleEliminar}
+          onModificar={handleModificar}
+        />
+        </ListItem>
+      ))}
     </List>
   );
 };

@@ -3,7 +3,7 @@
   font-size: 1.1vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 32vw;
+  width: 30vw;
   height: fit-content;
   justify-content: space-between;
   background-color: #b6d9f5;
@@ -11,11 +11,11 @@
   padding-right: 0.5em;
   overflow: hidden;
   margin: 0;
-  gap: 5%;
+  gap: 1vw;
 }
 
 .cont-check-titulo {
-  width: 24vw;
+  width: 22.5vw;
   margin: 0;
   display: flex;
   justify-content: flex-start;
