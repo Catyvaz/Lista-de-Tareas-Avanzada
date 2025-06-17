@@ -10,7 +10,7 @@ import { type TareaProps } from "../Types/Props";
 export const App = () => {
   const [titulo, setTitulo] = useState("");
   const [tareas, setTareas] = useState<TareaProps[]>([
-    { titulo: "tarea 1", estado: false },
+    { titulo: "Tarea 1", estado: false },
   ]);
   const [filtro, setFiltro] = useState<"todas" | "pendientes" | "hechas">(
     "todas"
