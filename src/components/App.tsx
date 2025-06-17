@@ -5,7 +5,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import { useState } from "react";
 import { AgregarTarea } from "./Metodos";
 import { ListaTareas } from "./ListaTareas";
-import { type TareaProps } from "../Types/Props";
+import { type TareaProps } from "../interface/Props";
 
 export const App = () => {
   const [titulo, setTitulo] = useState("");

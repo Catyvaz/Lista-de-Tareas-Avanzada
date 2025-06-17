@@ -2,7 +2,7 @@ import Checkbox from "@mui/material/Checkbox";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
 import "../styles/Tarea.css";
-import type { TareaPropsExtended } from "../Types/Props";
+import type { TareaPropsExtended } from "../interface/Props";
 
 export const Tarea: React.FC<TareaPropsExtended> =({ titulo, estado, onCambiarEstado, onEliminar, onModificar }) => {
   const handleCambiarEstado = () => {

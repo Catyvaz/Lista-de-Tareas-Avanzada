@@ -1,4 +1,4 @@
-import { type ListaTareasProps } from "../Types/Props";
+import { type ListaTareasProps } from "../interface/Props";
 import { Tarea } from "./Tarea";
 import { EliminarTarea, CambiarEstadoTarea, ModificarTarea } from "./Metodos";
 import React from "react";

@@ -1,4 +1,4 @@
-import type { TareaProps } from "../Types/Props";
+import type { TareaProps } from "../interface/Props";
 
 export function AgregarTarea(
   titulo: string,
