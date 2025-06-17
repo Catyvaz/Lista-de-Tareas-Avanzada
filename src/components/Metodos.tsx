@@ -52,8 +52,10 @@ export function CambiarEstadoTarea(
   setTareas: React.Dispatch<React.SetStateAction<TareaProps[]>>,
   titulo: string
 ) {
+  console.log(titulo, tareas);
   const nuevosEstados = tareas.map((tarea) =>
     tarea.titulo === titulo ? { ...tarea, estado: !tarea.estado } : tarea
   );
+  console.log(nuevosEstados);
   setTareas(nuevosEstados);
 }

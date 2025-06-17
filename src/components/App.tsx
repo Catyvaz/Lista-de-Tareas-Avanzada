@@ -56,6 +56,7 @@ export const App = () => {
       <div className="contenedor-tareas">
         <ListaTareas
           tareas={tareasFiltradas()}
+          listaCompleta={tareas}
           setTareas={setTareas}
           FiltrarTareas={(estado: boolean) =>
             tareas.filter((tarea) => tarea.estado === estado)

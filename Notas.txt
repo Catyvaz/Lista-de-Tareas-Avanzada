@@ -1,0 +1,6 @@
+
+React.Dispatch<React.SetStateAction<>>
+
+Dispatch = recibe algo y lo procesa
+SetStateAction = representa las acciones que pueden cambiar el estado (puede ser un valor directo o una función que toma un 
+estado y retorna uno nuevo)

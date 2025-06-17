@@ -6,17 +6,17 @@ import { List, ListItem } from "@mui/material";
 
 //SetStateAction, define el tipo de valor que se le pasa al setter, y aca lo que hace es permitir que se pase una lista nueva o una función que retorna una lista.
 
-export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, setTareas }) => {
+export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, listaCompleta, setTareas }) => {
   const handleCambiarEstado = (titulo: string) => {
-    CambiarEstadoTarea(tareas, setTareas, titulo);
+    CambiarEstadoTarea(listaCompleta, setTareas, titulo);
   };
 
   const handleEliminar = (titulo: string) => {
-    EliminarTarea(tareas, setTareas, titulo);
+    EliminarTarea(listaCompleta, setTareas, titulo);
   };
 
   const handleModificar = (titulo: string) => {
-    ModificarTarea(tareas, setTareas, titulo);
+    ModificarTarea(listaCompleta, setTareas, titulo);
   };
 
   return (
@@ -27,7 +27,6 @@ export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, setTareas }) =
       .map((tarea, index) => (
         <ListItem key={index}>
         <Tarea
-          key={index}
           titulo={tarea.titulo}
           estado={tarea.estado}
           onCambiarEstado={handleCambiarEstado}

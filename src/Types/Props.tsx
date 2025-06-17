@@ -11,6 +11,7 @@ export interface TareaPropsExtended extends TareaProps {
 
 export interface ListaTareasProps {
   tareas: TareaProps[];
+  listaCompleta: TareaProps[];
   FiltrarTareas: (estado: boolean) => TareaProps[];
   setTareas: React.Dispatch<React.SetStateAction<ListaTareasProps["tareas"]>>;
 }
