@@ -11,14 +11,14 @@ export const Tarea: React.FC<TareaPropsExtended> =({ titulo, estado, onCambiarEs
 
   const handleEliminar = () => {
     if (window.confirm(`¿Estás seguro de eliminar la tarea "${titulo}"?`)) {
-      onEliminar(titulo); // Llama a la función del padre
+      onEliminar(titulo);
     }else{
       return;
     }
   };
 
   const handleModificar = () => {
-    onModificar(titulo); // Llama a la función del padre
+    onModificar(titulo);
   };
 
   return (
