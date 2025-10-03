@@ -15,8 +15,8 @@ export const ListaTareas: React.FC<ListaTareasProps> = ({ tareas, listaCompleta,
     EliminarTarea(listaCompleta, setTareas, titulo);
   };
 
-  const handleModificar = (titulo: string) => {
-    ModificarTarea(listaCompleta, setTareas, titulo);
+  const handleModificar = (titulo: string, nuevoTitulo: string) => {
+    ModificarTarea(listaCompleta, setTareas, titulo, nuevoTitulo);
   };
 
   return (

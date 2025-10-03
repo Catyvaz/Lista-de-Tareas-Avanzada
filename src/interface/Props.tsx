@@ -6,7 +6,7 @@ export interface TareaProps {
 export interface TareaPropsExtended extends TareaProps {
   onCambiarEstado: (titulo:string) => void;
   onEliminar: (titulo:string) => void;
-  onModificar: (titulo: string) => void;
+  onModificar: (titulo: string, nuevoTitulo: string) => void;
 }
 
 export interface ListaTareasProps {
